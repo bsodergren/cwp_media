@@ -59,7 +59,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "CWP\\": "src/"
+            "CWP\\": "src/MediaClass/"
         }
     },
     "minimum-stability": "dev",
