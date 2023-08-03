@@ -1,9 +1,10 @@
 <?php
+
+use CWP\Media\Bootstrap;
 /**
  * CWP Media tool
  */
 
-use CWP\Bootstrap;
 
 define('APP_NAME', Bootstrap::$CONFIG['application']['name']);
 define('APP_ORGANIZATION', 'cwp');

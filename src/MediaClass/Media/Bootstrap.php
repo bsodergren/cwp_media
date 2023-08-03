@@ -21,9 +21,7 @@ class Bootstrap
         $this->define('__DRIVE_LETTER__', $this->getDriveLetter());
         $this->define('__NO_UPDATES__', $this->skipProgramUpdates());
         $this->definePath('__BIN_DIR__', $this->getUsrBin());
-        $this->definePath('__VERSION_FILE__', $this->getVersionFile());
-        $this->definePath('__VERSION_DL_DIR__', $this->getVersionDir());
-        $this->definePath('__FILES_DIR__', $this->getFileStorage());
+         $this->definePath('__FILES_DIR__', $this->getFileStorage());
         $this->define('__URL_PATH__', $this->getURL());
     }
 
@@ -76,24 +74,14 @@ class Bootstrap
     }
     private function getUsrBin()
     {
-        return __DRIVE_LETTER__.$this->Config['server']['bin_dir'];
+        return __PROJECT_ROOT__.DIRECTORY_SEPARATOR."bin";
     }
 
     private function getFileStorage()
     {
-        return __HTTP_ROOT__.\DIRECTORY_SEPARATOR.$this->Config['server']['file_root'];
+        return __HTTP_ROOT__.\DIRECTORY_SEPARATOR."files";
     }
-
-    private function getVersionDir()
-    {
-        return __HTTP_ROOT__.\DIRECTORY_SEPARATOR.'updater/download';
-    }
-
-    private function getVersionFile()
-    {
-        return __HTTP_ROOT__.\DIRECTORY_SEPARATOR.'updater/current.txt';
-    }
-
+    
     private function skipProgramUpdates()
     {
         global $_SERVER;
