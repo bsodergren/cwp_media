@@ -6,7 +6,7 @@
 namespace CWP\Media\Update;
 
 use CWP\HTML\HTMLDisplay;
-use CWP\Media\MediaProcess;
+use CWP\Media\MediaExec;
 
 class AppUpdate extends MediaUpdate
 {
@@ -36,7 +36,7 @@ class AppUpdate extends MediaUpdate
 
             $current = trim($this->get_content($this->updateUrl));
             self::$CURRENT_VERSION = $current;
-            $this->installed = trim(file_get_contents(__VERSION_FILE__));
+            $this->installed = trim(file_get_contents(__UPDATE_CURRENT_FILE__));
             self::$UPDATES_PENDING = false;
             if ($current > $this->installed) {
                 self::$UPDATES_PENDING = $this->getNumUpdates();
@@ -113,7 +113,7 @@ class AppUpdate extends MediaUpdate
     {
         foreach ($this->updateFiles as $updateFile) {
             HTMLDisplay::put('Writing '.basename($updateFile), 'red');
-            $process = new MediaProcess();
+            $process = new MediaExec();
             $process->command($this->patcher_exec);
             $process->option('-O', __PROJECT_ROOT__);
             $process->option('-P', $updateFile);

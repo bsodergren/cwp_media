@@ -12,6 +12,7 @@ namespace CWP\Process;
 use CWP\HTML\HTMLDisplay;
 use CWP\HTML\Template;
 use CWP\Media\Import\PDFImport;
+use CWP\Media\MediaExec;
 use CWP\Media\MediaFileSystem;
 use Nette\Utils\FileSystem;
 
@@ -113,7 +114,7 @@ class Import extends MediaProcess
 
                 if ($didUpload) {
                     $pdf_file = FileSystem::normalizePath($pdf_file);
-                    $process = new \CWP\Media\MediaProcess();
+                    $process = new MediaExec();
                     $process->cleanPdf($pdf_file);
 
                     //  sleep(5);
