@@ -10,7 +10,7 @@ namespace CWP\Media\Update;
  */
 
 use CWP\Media\MediaSetup;
-use CWP\Utils;
+use CWP\Utils\Utils;
 use Nette\Database\Helpers;
 use Nette\Utils\FileSystem;
 
