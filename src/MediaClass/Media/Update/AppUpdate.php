@@ -36,7 +36,7 @@ class AppUpdate extends MediaUpdate
 
             $current = trim($this->get_content($this->updateUrl));
             self::$CURRENT_VERSION = $current;
-            $this->installed = trim(file_get_contents(__VERSION_FILE__));
+            $this->installed = trim(file_get_contents(__UPDATE_CURRENT_FILE__));
             self::$UPDATES_PENDING = false;
             if ($current > $this->installed) {
                 self::$UPDATES_PENDING = $this->getNumUpdates();
