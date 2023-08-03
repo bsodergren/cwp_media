@@ -5,7 +5,8 @@
 
 namespace CWP\Media;
 
-use CWP\Utils;
+use CWP\Utils\Utils;
+
 
 /**
  * @property mixed $job_id

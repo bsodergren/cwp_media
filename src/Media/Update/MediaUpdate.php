@@ -9,9 +9,9 @@ namespace CWP\Media\Update;
  * CWP Media tool
  */
 
-use CWP\Bootstrap;
 use CWP\Db\MediaMySQL;
 use CWP\Db\MediaSqlite;
+use CWP\Media\Bootstrap;
 
 class MediaUpdate
 {

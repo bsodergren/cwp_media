@@ -16,7 +16,7 @@ use CWP\Media\MediaError;
 use CWP\Media\MediaExport;
 use CWP\Media\MediaFileSystem;
 use CWP\Spreadsheet\Media\MediaXLSX;
-use CWP\Zip;
+use CWP\Utils\Zip;
 
 class Index extends MediaProcess
 {

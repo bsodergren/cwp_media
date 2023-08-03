@@ -5,7 +5,7 @@
 
 namespace CWP\Media;
 
-use CWP\Zip;
+use CWP\Utils\Zip;
 use Nette\Utils\FileSystem;
 
 class MediaExport

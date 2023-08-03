@@ -7,7 +7,7 @@ namespace CWP\Media\Import;
 
 use CWP\HTML\HTMLDisplay;
 use CWP\Media\Media;
-use CWP\Utils;
+use CWP\Utils\Utils;
 use Smalot\PdfParser\Parser;
 
 class OrigPDFImport extends MediaImport

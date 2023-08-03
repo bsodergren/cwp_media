@@ -5,10 +5,10 @@
 
 namespace CWP\Media;
 
-use CWP\Bootstrap;
 use CWP\HTML\HTMLDisplay;
 use CWP\HTML\Template;
-use CWP\Utils;
+use CWP\Media\Bootstrap;
+use CWP\Utils\Utils;
 use Nette\Database\Connection;
 use Nette\Database\Helpers;
 use Nette\Utils\FileSystem;

@@ -5,7 +5,7 @@
 
 namespace CWP\Media;
 
-use CWP\Bootstrap;
+use CWP\Media\Bootstrap;
 
 /**
  * CWP Media tool.

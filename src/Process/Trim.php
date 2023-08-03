@@ -5,10 +5,9 @@
 
 namespace CWP\Process;
 
-use CWP\HTML\HTMLDisplay;
 use CWP\Media\Media;
 use CWP\Media\MediaPublication;
-use CWP\Utils;
+use CWP\Utils\Utils;
 use Formr\Formr;
 
 class Trim extends MediaProcess
