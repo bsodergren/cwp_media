@@ -14,7 +14,7 @@ use Nette\Utils\Callback;
 use Nette\Utils\FileSystem;
 use Symfony\Component\Process\Process;
 
-class MediaProcess
+class MediaExec
 {
     public $executable;
     public $optArray = [];

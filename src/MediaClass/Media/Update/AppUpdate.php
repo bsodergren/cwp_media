@@ -6,7 +6,7 @@
 namespace CWP\Media\Update;
 
 use CWP\HTML\HTMLDisplay;
-use CWP\Media\MediaProcess;
+use CWP\Media\MediaExec;
 
 class AppUpdate extends MediaUpdate
 {
@@ -113,7 +113,7 @@ class AppUpdate extends MediaUpdate
     {
         foreach ($this->updateFiles as $updateFile) {
             HTMLDisplay::put('Writing '.basename($updateFile), 'red');
-            $process = new MediaProcess();
+            $process = new MediaExec();
             $process->command($this->patcher_exec);
             $process->option('-O', __PROJECT_ROOT__);
             $process->option('-P', $updateFile);
